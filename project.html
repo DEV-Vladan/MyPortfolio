@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Vladan's Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="flex justify-between items-center p-6 shadow-md card">
+      <h1 class="text-2xl font-bold text-purple-500">Vladan's Portfolio</h1>
+      <div class="space-x-6">
+        <a href="index.html#projects" class="hover:text-purple-500">Home</a>
+        <button
+          onclick="toggleTheme()"
+          class="ml-4 px-3 py-1 rounded bg-purple-600 text-white hover:bg-purple-700 transition"
+        >
+          Toggle Mode
+        </button>
+      </div>
+    </nav>
+
+    <section class="py-20 px-6 card">
+      <h3 class="text-3xl font-bold text-center text-purple-500 mb-12">My Projects</h3>
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  <div class="p-6 rounded-xl shadow-lg bg-gray-800 text-white">
+    <h4 class="text-xl font-bold mb-2">Project One</h4>
+    <p class="mb-4">Description of the first project.</p>
+    <a
+      href="https://www.youtube.com/watch?v=LINK1"
+      target="_blank"
+      class="inline-block mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+    >
+      Full View
+    </a>
+  </div>
+
+  <div class="p-6 rounded-xl shadow-lg bg-gray-800 text-white">
+    <h4 class="text-xl font-bold mb-2">Project Two</h4>
+    <p class="mb-4">Description of the second project.</p>
+    <a
+      href="https://www.youtube.com/watch?v=LINK2"
+      target="_blank"
+      class="inline-block mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+    >
+      Full View
+    </a>
+  </div>
+
+  <div class="p-6 rounded-xl shadow-lg bg-gray-800 text-white">
+    <h4 class="text-xl font-bold mb-2">Project Three</h4>
+    <p class="mb-4">Description of the third project.</p>
+    <a
+      href="https://www.youtube.com/watch?v=LINK3"
+      target="_blank"
+      class="inline-block mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+    >
+      Full View
+    </a>
+  </div>
+
+  <div class="p-6 rounded-xl shadow-lg bg-gray-800 text-white">
+    <h4 class="text-xl font-bold mb-2">Project Four</h4>
+    <p class="mb-4">Description of the fourth project.</p>
+    <a
+      href="https://www.youtube.com/watch?v=LINK4"
+      target="_blank"
+      class="inline-block mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+    >
+      Full View
+    </a>
+  </div>
+
+  <div class="p-6 rounded-xl shadow-lg bg-gray-800 text-white">
+    <h4 class="text-xl font-bold mb-2">Project Five</h4>
+    <p class="mb-4">Description of the fifth project.</p>
+    <a
+      href="https://www.youtube.com/watch?v=LINK5"
+      target="_blank"
+      class="inline-block mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+    >
+      Full View
+    </a>
+  </div>
+</div>
+
+    </section>
+
+    <footer class="text-center py-6 text-sm card">
+      © 2025 Vladan. All rights reserved.
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+      }
+    </script>
+  </body>
+</html>

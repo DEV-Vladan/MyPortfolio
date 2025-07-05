@@ -1,0 +1,24 @@
+html[data-theme='light'] {
+    --bg: #f9f9f9;
+    --text: #111;
+    --card: #ffffff;
+  }
+  
+  html[data-theme='dark'] {
+    --bg: #111827;
+    --text: #f3f4f6;
+    --card: #1f2937;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .card {
+    background-color: var(--card);
+    transition: background-color 0.3s;
+  }
+  

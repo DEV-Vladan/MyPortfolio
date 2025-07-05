@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="flex justify-between items-center p-6 shadow-md card">
+      <h1 class="text-2xl font-bold text-purple-500">Vladan's Portfolio</h1>
+      <div class="space-x-6">
+        <a href="#projects" class="hover:text-purple-500">Projects</a>
+        <a href="#about" class="hover:text-purple-500">About</a>
+        <a href="#contact" class="hover:text-purple-500">Contact</a>
+        <button
+          onclick="toggleTheme()"
+          class="ml-4 px-3 py-1 rounded bg-purple-600 text-white hover:bg-purple-700 transition"
+        >
+          Toggle Mode
+        </button>
+      </div>
+    </nav>
+
+    <section class="text-center py-20 px-6" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-4 text-purple-500">Hey, I'm Vladan!</h2>
+      <p class="text-lg max-w-xl mx-auto">
+        A passionate developer who builds clean and functional code to your hearts desire.!
+      </p>
+      <a
+        href="#projects"
+        class="mt-6 inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white"
+      >
+        See My Work
+      </a>
+    </section>
+
+<section id="projects" class="py-20 px-6 card flex justify-center" data-aos="fade-up">
+  <div class="text-center">
+    <h3 class="text-3xl font-bold text-purple-500 mb-12">Projects</h3>
+    <div class="p-6 rounded-xl shadow-lg card flex flex-col items-center gap-4 w-80 mx-auto" data-aos="zoom-in">
+      <h4 class="text-xl font-bold">Input</h4>
+      <p class="text-center">Input</p>
+      <a
+        href="project.html"
+        class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+      >
+        View Project →
+      </a>
+    </div>
+  </div>
+</section>
+
+    <section id="about" class="py-20 px-6" data-aos="fade-up">
+      <h3 class="text-3xl font-bold text-center text-purple-500 mb-12">About Me</h3>
+      <div class="max-w-3xl mx-auto text-center">
+        <p>
+          I'm a developer with a love for clean UI, minimal UX, and powerful backend logic.
+          My favorite programming languages include LUAU(Roblox), CSS, JS;
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 card" data-aos="fade-up">
+      <h3 class="text-3xl font-bold text-center text-purple-500 mb-12">Contact Me</h3>
+      <form action="https://formsubmit.co/vladantasic36@gmail.com" method="POST" class="max-w-lg mx-auto space-y-4">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-gray-200 text-black" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-gray-200 text-black" />
+        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-gray-200 text-black"></textarea>
+        <button type="submit" class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-lg w-full text-white font-bold">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <footer class="text-center py-6 text-sm card">
+      © 2025 Vladan. All rights reserved.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+      }
+    </script>
+  </body>
+</html>
